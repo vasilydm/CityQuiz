@@ -1,0 +1,18 @@
+.Layout {
+    height: 100hv;
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(38, 9, 64);
+    background-image:  url("../../photos/cityjpg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.Layout main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
