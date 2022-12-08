@@ -5,7 +5,7 @@ import FinishedQuiz from '../../components/FinishedQuiz/FinishedQuiz'
 
 class Quiz extends Component {
   state = {
-    results: {}, // {[id]: success error}
+    results: {}, // {[id]: success error} PROBLEM
     isFinished: false,
     activeQuestion: 0,
     answerState: null, // { [id]: 'success' 'error' }
@@ -93,7 +93,7 @@ class Quiz extends Component {
     return (
       <div className={classes.Quiz}>
         <div className={classes.QuizWrapper}>
-          <h1>Ответьте на все вопросы</h1>
+          <h1 className={classes.h1}>Ответьте на все вопросы</h1>
 
           {
             this.state.isFinished
