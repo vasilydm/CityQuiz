@@ -2,12 +2,17 @@ import React from "react";
 import classes from './Button.module.css'
 
 const Button = props => {
+    const cls = [
+        classes.Button,
+        classes[props.type]
+    ]
     return(
         <button
-        className={classes.Button}
+        className={cls.join(' ')}
         onClick={props.onRetry}
+        disabled={props.disabled}
         >
-            Повторить
+            {props.children}
         </button>
     )
 }

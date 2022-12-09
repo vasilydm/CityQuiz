@@ -12,6 +12,7 @@ class Quiz extends Component {
     quiz: [
         {
             question: 'The first-ever Olympic game was held here:',
+            id: 1,
             rightAnswerId: 1,
             answers: [
                 {text: 'Athens', id: 1},
@@ -22,6 +23,7 @@ class Quiz extends Component {
         },
         {
             question: "Which country's capital is Freetown?",
+            id: 2,
             rightAnswerId: 2,
             answers: [
                 {text: 'Guinea', id: 1},
@@ -74,7 +76,9 @@ class Quiz extends Component {
         results
       })
     }
-  }
+  };
+
+
 
   isQuizFinished() {
     return this.state.activeQuestion + 1 === this.state.quiz.length
@@ -93,7 +97,7 @@ class Quiz extends Component {
     return (
       <div className={classes.Quiz}>
         <div className={classes.QuizWrapper}>
-          <h1 className={classes.h1}>Ответьте на все вопросы</h1>
+          <h1 className={classes.h1}>Answer all questions</h1>
 
           {
             this.state.isFinished

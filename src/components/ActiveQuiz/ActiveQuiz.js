@@ -5,12 +5,13 @@ import AnswersList from "../AnswersList/AnswersList";
 const ActiveQuiz = props => (
     <div className={classes.ActiveQuiz}>
         <p className={classes.Question}>
+            <div className={classes.enumeration}>
+                {props.answerNumber} / {props.quizLength}
+            </div>
+
             <span>
-                <strong>{props.answerNumber}. </strong>
                 {props.question}
             </span>
-
-            <small>{props.answerNumber} из {props.quizLength}</small>
         </p>
         
         <AnswersList
