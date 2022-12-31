@@ -5,7 +5,7 @@ import FinishedQuiz from '../../components/FinishedQuiz/FinishedQuiz'
 
 class Quiz extends Component {
   state = {
-    results: {}, // {[id]: success error} PROBLEM
+    results: {}, // {[id]: success error}
     isFinished: false,
     activeQuestion: 0,
     answerState: null, // { [id]: 'success' 'error' }
@@ -71,6 +71,7 @@ class Quiz extends Component {
       }, 1000)
     } else {
       results[question.id] = 'error'
+      
       this.setState({
         answerState: {[answerId]: 'error'},
         results
@@ -105,7 +106,8 @@ class Quiz extends Component {
                   results={this.state.results}
                   quiz={this.state.quiz}
                   onRetry={this.retryHandler}
-                />
+                >
+                </FinishedQuiz>
              : <ActiveQuiz
                 answers={this.state.quiz[this.state.activeQuestion].answers}
                 question={this.state.quiz[this.state.activeQuestion].question}
@@ -113,7 +115,8 @@ class Quiz extends Component {
                 quizLength={this.state.quiz.length}
                 answerNumber={this.state.activeQuestion + 1}
                 state={this.state.answerState}
-              />
+              >
+              </ActiveQuiz>
           }
         </div>
       </div>

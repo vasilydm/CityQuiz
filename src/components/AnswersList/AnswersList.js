@@ -12,7 +12,8 @@ const AnswersList = props => {
                         answer={answer}
                         onAnswerClick={props.onAnswerClick}
                         state={props.state ? props.state[answer.id] : null}
-                    />
+                    >
+                    </AnswerItem>
                 )
             }) }
         </ul>

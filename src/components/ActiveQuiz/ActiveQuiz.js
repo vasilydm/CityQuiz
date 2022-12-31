@@ -4,7 +4,7 @@ import AnswersList from "../AnswersList/AnswersList";
 
 const ActiveQuiz = props => (
     <div className={classes.ActiveQuiz}>
-        <p className={classes.Question}>
+        <span className={classes.Question}>
             <div className={classes.enumeration}>
                 {props.answerNumber} / {props.quizLength}
             </div>
@@ -12,14 +12,14 @@ const ActiveQuiz = props => (
             <span>
                 {props.question}
             </span>
-        </p>
+        </span>
         
         <AnswersList
             state={props.state}
             answers={props.answers}
             onAnswerClick={props.onAnswerClick}
-        />
-        
+        >
+        </AnswersList>
     </div>
 )
 
