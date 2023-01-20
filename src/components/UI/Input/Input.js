@@ -10,10 +10,6 @@ const Input = props => {
   const cls = [classes.Input]
   const htmlFor = `${inputType}-${Math.random()}`
 
-  // if (true) {
-  //   cls.push(classes.invalid)
-  // }
-
   return (
     <div className={cls.join(' ')}>
       <label htmlFor={htmlFor}>{props.label}</label>

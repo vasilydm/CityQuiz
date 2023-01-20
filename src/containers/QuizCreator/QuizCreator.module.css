@@ -1,27 +1,21 @@
-.Auth {
+.QuizCreator {
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
   flex-grow: 1;
   width: 100%;
 }
 
-.Auth > div {
+.QuizCreator > div {
   width: 100%;
   min-width: 600px;
   padding: 0 20px;
 }
 
-.Auth h1 {
-  color: #fff;
-  text-align: center;
-}
-
-.AuthForm {
+.QuizCreator form {
   backdrop-filter: blur(50px);
   border: 1px solid transparent;
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.637);
   padding: 15px;
 }
-
